@@ -14,40 +14,12 @@ let mainWindow;
 
 const server = require( './index.js' );
 
+var name = require( 'electron' ).app.getName();
 let menu = Menu.buildFromTemplate([ {
   submenu: [
     {
-      label: 'Meseeks',
-      accelerator: 'CmdOrCtrl+Z',
-      role: 'undo'
-    },
-    {
-      label: 'Redo',
-      accelerator: 'Shift+CmdOrCtrl+Z',
-      role: 'redo'
-    },
-    {
-      type: 'separator'
-    },
-    {
-      label: 'Cut',
-      accelerator: 'CmdOrCtrl+X',
-      role: 'cut'
-    },
-    {
-      label: 'Copy',
-      accelerator: 'CmdOrCtrl+C',
-      role: 'copy'
-    },
-    {
-      label: 'Paste',
-      accelerator: 'CmdOrCtrl+V',
-      role: 'paste'
-    },
-    {
-      label: 'Select All',
-      accelerator: 'CmdOrCtrl+A',
-      role: 'selectall'
+        label: 'About ' + name,
+        role: 'about'
     }
   ]
 } ]);

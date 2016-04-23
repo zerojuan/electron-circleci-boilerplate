@@ -2,9 +2,15 @@
   "name": "electron-circleci-template",
   "version": "0.0.1",
   "description": "Boilerplate code for continuous deploying an Electron based app",
-  "main": "main.js",
+  "main": "./app/out/main.js",
   "scripts": {
-    "start": "electron main.js"
+    "postinstall": "install-app-deps",
+    "start": "npm install && electron ./app",
+    "clean": "rimraf dist/",
+    "pack": "build",
+    "dist": "build",
+    "test": "node test",
+    "test-ci": "node test | tap-xunit"
   },
   "repository": {
     "type": "git",
@@ -36,10 +42,13 @@
     }
   },
   "author": "JuliusThePious <me@juliuscebreros.com>",
+  "license": "ISC",
   "devDependencies": {
-    "electron-prebuilt": "^0.36.0"
+    "electron-prebuilt": "^0.37.6",
+    "electron-builder": "^3.6.1"
   },
   "dependencies": {
+    "async": "^1.5.1",
     "express": "^4.13.4"
   }
 }
