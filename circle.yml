@@ -6,4 +6,8 @@ dependencies:
     - npm set progress=false
     - npm install
     - npm install rimraf -g
-    - cd server && npm install
+deployment:
+  release:
+    tag: /release-*/
+    commands:
+      - ./build/release-to-github.sh
