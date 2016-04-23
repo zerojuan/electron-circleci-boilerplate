@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
+      Make a request
+    </span>
+    We are using node <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+    <script type="text/javascript">
+      (function() {
+        // var electron = require( 'electron' ).remote;
+        // var Menu = electron.Menu;
+        // var MenuItem = electron.MenuItem;
+        //
+        // var menu = new Menu();
+        // menu.append(new MenuItem({ label: 'MenuItem1', click: function() { console.log('item 1 clicked'); } }));
+        // menu.append(new MenuItem({ type: 'separator' }));
+        // menu.append(new MenuItem({ label: 'MenuItem2', type: 'checkbox', checked: true }));
+        //
+        // // Menu.setApplicationMenu( menu );
+        //
+        // window.addEventListener('contextmenu', function (e) {
+        //   e.preventDefault();
+        //   menu.popup(electron.getCurrentWindow());
+        // }, false);
+
+        var httpRequest;
+        document.getElementById("ajaxButton").onclick = function() { makeRequest('http://localhost:7171/'); };
+
+        function makeRequest(url) {
+          httpRequest = new XMLHttpRequest();
+
+          if (!httpRequest) {
+            alert('Giving up :( Cannot create an XMLHTTP instance');
+            return false;
+          }
+          httpRequest.onreadystatechange = alertContents;
+          httpRequest.open('GET', url);
+          httpRequest.send();
+        }
+
+        function alertContents() {
+          if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+              alert(httpRequest.responseText);
+            } else {
+              alert('There was a problem with the request.');
+            }
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

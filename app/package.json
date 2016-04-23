@@ -1,0 +1,11 @@
+{
+  "name": "CoolElectronApp",
+  "version": "0.0.1",
+  "description": "The coolest electron based app",
+  "author": "JuliusThePious <juliuscebreros@gmail.com>",
+  "private": true,
+  "main": "./out/main.js",
+  "dependencies": {
+    "async": "^1.5.1"
+  }
+}

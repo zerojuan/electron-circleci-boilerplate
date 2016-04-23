@@ -1,0 +1,45 @@
+{
+  "name": "electron-circleci-template",
+  "version": "0.0.1",
+  "description": "Boilerplate code for continuous deploying an Electron based app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zerojuan/electron-circleci-boilerplate.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "circle"
+  ],
+  "build": {
+    "app-bundle-id": "xyz.electronapp.electioneersdesigner",
+    "app-category-type": "public.app-category.games",
+    "osx": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    }
+  },
+  "author": "JuliusThePious <me@juliuscebreros.com>",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

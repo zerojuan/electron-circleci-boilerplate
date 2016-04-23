@@ -1,0 +1,9 @@
+machine:
+  node:
+    version: 5.2.0
+dependencies:
+  override:
+    - npm set progress=false
+    - npm install
+    - npm install rimraf -g
+    - cd server && npm install
