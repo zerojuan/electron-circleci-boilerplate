@@ -8,6 +8,6 @@ dependencies:
     - npm install rimraf -g
 deployment:
   release:
-    tag: /release-*/
+    tag: /v*/
     commands:
       - ./build/release-to-github.sh
