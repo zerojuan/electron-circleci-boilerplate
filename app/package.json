@@ -1,6 +1,6 @@
 {
   "name": "CoolElectronApp",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "The coolest electron based app",
   "author": "JuliusThePious <juliuscebreros@gmail.com>",
   "private": true,
