@@ -1,10 +1,11 @@
 {
   "name": "CoolElectronApp",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "The coolest electron based app",
   "author": "JuliusThePious <juliuscebreros@gmail.com>",
   "private": true,
   "main": "./out/main.js",
+  "license": "ISC",
   "dependencies": {
     "async": "^1.5.1",
     "express": "^4.13.4"

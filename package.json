@@ -8,7 +8,7 @@
     "start": "npm install && electron ./app",
     "clean": "rimraf dist/",
     "pack": "build",
-    "dist": "build",
+    "dist": "npm run clean && build --platform all",
     "test": "node test",
     "test-ci": "node test | tap-xunit"
   },
@@ -42,7 +42,6 @@
     }
   },
   "author": "JuliusThePious <me@juliuscebreros.com>",
-  "license": "ISC",
   "devDependencies": {
     "electron-builder": "^3.6.1",
     "electron-prebuilt": "^0.37.6",

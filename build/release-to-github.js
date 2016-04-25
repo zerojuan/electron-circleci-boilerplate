@@ -2,7 +2,7 @@ const github = require( 'octonode' );
 const fs = require( 'fs' );
 const path = require( 'path' );
 
-var client = github.client( 'd1668c31389751ddfc03dbc79776f9f3f0c234ea' );
+var client = github.client( process.env.GITHUB_AUTH );
 var ghrepo = client.repo( 'zerojuan/electron-circleci-boilerplate' );
 
 var version = process.env.CIRCLE_TAG;
