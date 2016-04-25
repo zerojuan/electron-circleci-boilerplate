@@ -2,6 +2,8 @@ machine:
   node:
     version: 5.2.0
 dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install jq
   override:
     - npm set progress=false
     - npm install
@@ -10,4 +12,4 @@ deployment:
   release:
     tag: /v[0-9]+(\.[0-9]+)*/
     commands:
-      - ./build/release-to-github.sh
+      - node ./build/release-to-github.js

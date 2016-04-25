@@ -46,6 +46,7 @@
   "devDependencies": {
     "electron-builder": "^3.6.1",
     "electron-prebuilt": "^0.37.6",
+    "octonode": "^0.7.5",
     "tape": "^4.5.1"
   },
   "dependencies": {
