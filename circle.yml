@@ -3,6 +3,7 @@ machine:
     version: 5.2.0
 dependencies:
   pre:
+    - sudo dpkg --add-architecture i386
     - sudo add-apt-repository -y ppa:ubuntu-wine/ppa
     - sudo apt-get update
     - sudo apt-get install wine1.8 winetricks
