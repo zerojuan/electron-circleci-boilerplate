@@ -9,6 +9,7 @@
     "clean": "rimraf dist/",
     "pack": "build",
     "dist": "npm run clean && build -d --platform darwin linux",
+    "dist:x64": "npm run clean && build -d",
     "test": "node test",
     "test-ci": "node test | tap-xunit"
   },
