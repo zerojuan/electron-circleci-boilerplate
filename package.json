@@ -8,7 +8,7 @@
     "start": "npm install && electron ./app",
     "clean": "rimraf dist/",
     "pack": "build",
-    "dist": "npm run clean && build --platform all",
+    "dist": "npm run clean && build -d --platform darwin linux",
     "test": "node test",
     "test-ci": "node test | tap-xunit"
   },
