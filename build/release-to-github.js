@@ -7,9 +7,9 @@ var ghrepo = client.repo( 'zerojuan/electron-circleci-boilerplate' );
 
 var version = process.env.CIRCLE_TAG;
 ghrepo.release({
-  tag_name: 'v' + version,
+  tag_name: version,
   draft: true,
-  name: 'v' + version
+  name: version
 }, function( err, data ) {
   if ( err ) {
     throw new Error( err );
@@ -17,7 +17,7 @@ ghrepo.release({
   var id = data.id;
 
   var p = path.join( __dirname,
-      '../dist/CoolElectronApp-' + version + '-amd64.deb' );
+      '../dist/CoolElectronApp-' + version.substring( 1 ) + '-amd64.deb' );
   var archive = fs.readFileSync( p );
 
   var options = {
