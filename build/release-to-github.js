@@ -21,7 +21,7 @@ ghrepo.release({
   var archive = fs.readFileSync( p );
 
   var options = {
-    name: 'CoolElectronApp.deb'
+    name: 'CoolElectronApp-' + version.substring( 1 ) + '-amd64.deb'
   };
 
   var ghRelease = client.release( 'zerojuan/electron-circleci-boilerplate', id );
