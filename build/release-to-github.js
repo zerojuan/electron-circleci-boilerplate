@@ -17,11 +17,11 @@ ghrepo.release({
   var id = data.id;
 
   var p = path.join( __dirname,
-      '../dist/CoolElectronApp-darwin-x64/CoolElectronApp-' + version + '.dmg' );
+      '../dist/CoolElectronApp-' + version + '.deb' );
   var archive = fs.readFileSync( p );
 
   var options = {
-    name: 'CoolElectronApp.dmg'
+    name: 'CoolElectronApp.deb'
   };
 
   var ghRelease = client.release( 'zerojuan/electron-circleci-boilerplate', id );
