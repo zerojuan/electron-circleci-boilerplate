@@ -17,7 +17,7 @@ ghrepo.release({
   var id = data.id;
 
   var p = path.join( __dirname,
-      '../dist/CoolElectronApp-' + version + '.deb' );
+      '../dist/CoolElectronApp-' + version + '-amd64.deb' );
   var archive = fs.readFileSync( p );
 
   var options = {
