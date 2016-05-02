@@ -28,7 +28,6 @@ let menu = Menu.buildFromTemplate([ {
 //
 
 
-
 function createWindow () {
   Menu.setApplicationMenu( menu );
   // Create the browser window.
@@ -38,6 +37,8 @@ function createWindow () {
   mainWindow.loadURL( 'file://' + __dirname + '/index.html' );
 
   updateProcess.listenToUpdates( mainWindow );
+
+  mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on( 'closed', function() {

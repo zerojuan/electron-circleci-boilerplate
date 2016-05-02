@@ -9,6 +9,11 @@ module.exports = {
   listenToUpdates: function( window ) {
     const version = app.getVersion();
 
+    if ( os.platform() !== 'darwin' ) {
+      return;
+    }
+
+
     autoupdater.addListener( 'checking-for-update', function() {
       console.log( 'Checking for update' );
     });
@@ -21,11 +26,15 @@ module.exports = {
       console.log( 'Update available' );
     });
 
-    autoupdater.setFeedURL( 'https://' + UPDATE_SERVER_HOST +
-      '/update/' + os.platform() + '_' + os.arch() + '/' + version );
+    var url = 'http://' + UPDATE_SERVER_HOST +
+      '/update/' + os.platform() + '_' + os.arch() + '/' + version;
+    console.log( url );
+    autoupdater.setFeedURL( url );
 
-    window.webContents.once( 'did-frame-finish-load', function( event ) {
+    window.webContents.once( 'did-finish-load', function( event ) {
+      console.log( 'I am checking for updates' );
       autoupdater.checkForUpdates();
     });
+
   }
 };
