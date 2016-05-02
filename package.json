@@ -1,6 +1,6 @@
 {
   "name": "electron-circleci-template",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Boilerplate code for continuous deploying an Electron based app",
   "main": "./app/out/main.js",
   "scripts": {
