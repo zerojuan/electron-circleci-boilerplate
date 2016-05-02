@@ -1,5 +1,6 @@
 const electron = require( 'electron' );
 const os = require( 'os' );
+const log = require( 'nslog' );
 const autoupdater = electron.autoUpdater;
 const app = electron.app;
 
@@ -13,26 +14,27 @@ module.exports = {
       return;
     }
 
+    log( 'I am loaded what is up' );
 
     autoupdater.addListener( 'checking-for-update', function() {
-      console.log( 'Checking for update' );
+      log( 'Checking for update' );
     });
 
     autoupdater.addListener( 'update-not-available', function() {
-      console.log( 'Update not available' );
+      log( 'Update not available' );
     });
 
     autoupdater.addListener( 'update-available', function() {
-      console.log( 'Update available' );
+      log( 'Update available' );
     });
 
     var url = 'http://' + UPDATE_SERVER_HOST +
       '/update/' + os.platform() + '_' + os.arch() + '/' + version;
-    console.log( url );
+    log( url );
     autoupdater.setFeedURL( url );
 
     window.webContents.once( 'did-finish-load', function( event ) {
-      console.log( 'I am checking for updates' );
+      log( 'I am checking for updates' );
       autoupdater.checkForUpdates();
     });
 
