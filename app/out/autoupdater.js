@@ -29,7 +29,7 @@ module.exports = {
     });
 
     var url = 'http://' + UPDATE_SERVER_HOST +
-      '/update/' + os.platform() + '_' + os.arch() + '/' + version;
+      '/update/' + os.platform() + '_' + os.arch() + '/v' + version;
     log( url );
     autoupdater.setFeedURL( url );
 
