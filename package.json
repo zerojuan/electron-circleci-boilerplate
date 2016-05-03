@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "async": "^1.5.1",
+    "electron-is-dev": "^0.1.0",
     "express": "^4.13.4",
     "nslog": "^3.0.0"
   }

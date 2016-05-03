@@ -9,6 +9,7 @@
   "dependencies": {
     "async": "^1.5.1",
     "express": "^4.13.4",
-    "nslog": "^3.0.0"
+    "nslog": "^3.0.0",
+    "electron-is-dev": "^0.1.0"
   }
 }
