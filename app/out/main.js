@@ -8,7 +8,7 @@ const BrowserWindow = electron.BrowserWindow;
 const Menu = electron.Menu;
 const MenuItem = electron.MenuItem;
 
-const handleStartupEvent = require( './winstartuphandler.js' );
+const handleStartupEvent = require( './winstartuphandler.js' ).handleStartupEvent;
 
 var updateProcess = require( './autoupdater.js' );
 

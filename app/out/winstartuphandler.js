@@ -1,6 +1,8 @@
 const log = require( './util.js' ).log;
 const path = require( 'path' );
 const spawn = require( 'child_process' ).spawn;
+const electron = require( 'electron' );
+const app = electron.app;
 
 function run( args, done ) {
   const updateExe = path.resolve(
