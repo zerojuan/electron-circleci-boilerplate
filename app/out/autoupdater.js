@@ -47,13 +47,13 @@ module.exports = {
     });
 
     var url = 'http://' + UPDATE_SERVER_HOST +
-      '/update/' + os.platform() + '_' + os.arch() + '/v' + version;
+      '/update/' + os.platform() + '/v' + version;
     log( url );
     autoUpdater.setFeedURL( url );
 
     window.webContents.once( 'did-finish-load', function( event ) {
       autoUpdater.checkForUpdates();
-      notify( 'Checking for updates', 'Yo!' );
+      notify( 'Checking for updates', url );
     });
 
   }
