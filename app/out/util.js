@@ -1,8 +1,9 @@
 const isDev = require( 'electron-is-dev' );
-const nsLog = require( 'nslog' );
+//const nsLog = require( 'nslog' );
 
 var _log = function() {
-  nsLog( arguments );
+  //nsLog( arguments );
+  console.log( arguments );
 };
 
 if ( isDev ) {
