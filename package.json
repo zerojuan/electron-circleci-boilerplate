@@ -26,9 +26,6 @@
   "build": {
     "app-bundle-id": "xyz.electronapp.electioneersdesigner",
     "app-category-type": "public.app-category.games",
-    "win": {
-      "remoteReleases":
-    },
     "osx": {
       "contents": [
         {
