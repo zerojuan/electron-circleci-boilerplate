@@ -33,6 +33,7 @@ module.exports = {
 
     autoUpdater.addListener( 'update-not-available', function() {
       log( 'Update not available' );
+      notify( 'No need to update' );
     });
 
     autoUpdater.addListener( 'update-available', function() {
