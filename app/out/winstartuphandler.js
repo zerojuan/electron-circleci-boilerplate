@@ -20,6 +20,7 @@ module.exports = {
     }
 
     const cmd = process.argv[ 1 ];
+    
     log( 'Processing squirrel command `%s`', cmd );
     const target = path.basename( process.execPath );
     if ( cmd === '--squirrel-install' || cmd === '--squirrel-updated' ) {

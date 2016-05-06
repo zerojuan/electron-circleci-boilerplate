@@ -1,6 +1,6 @@
 const electron = require( 'electron' );
 const os = require( 'os' );
-const log = require( 'nslog' );
+const log = require( './util.js' ).log;
 const autoUpdater = electron.autoUpdater;
 const BrowserWindow = electron.BrowserWindow;
 const app = electron.app;
