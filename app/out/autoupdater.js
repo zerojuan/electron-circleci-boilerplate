@@ -25,10 +25,6 @@ module.exports = {
     }
     const version = app.getVersion();
 
-    if ( os.platform() !== 'darwin' ) {
-      return;
-    }
-
     log( 'I am loaded what is up' );
 
     autoUpdater.addListener( 'checking-for-update', function() {
@@ -41,6 +37,7 @@ module.exports = {
 
     autoUpdater.addListener( 'update-available', function() {
       log( 'Update available' );
+      notify( 'Update available' );
     });
 
     autoUpdater.addListener( 'update-downloaded',
